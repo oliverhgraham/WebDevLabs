@@ -1,0 +1,42 @@
+*{
+    font-family:roboto;
+}
+body{
+
+    color:rgb(255, 255, 255); 
+    background:rgb(152, 210, 226);
+    padding:5px;
+    margin:5px;
+}
+.head {
+    color: rgba(0, 0, 255, 0.5);
+    background-color: rgba(0, 0, 255, 0.1); /* Replace with your desired color */
+}
+a{
+    color:rgba(0, 255, 255,0.755)
+}
+table{
+    padding: 12px;
+    /*background-color: aquamarine;*/
+    
+    width:fit;}
+table tr:nth-child(1) {
+        background-color: white;
+        color:black;
+      }
+table tr:nth-child(3){
+    background-color:rgba(0, 0, 255, 0.1)
+}
+table tr:nth-child(5){
+    background-color:rgba(0, 0, 255, 0.1)
+}
+form{
+    display:block;
+    margin:auto;
+    text-align:center;
+}
+      /* Optionally, target all odd rows instead */
+      /*table tr:nth-child(odd) {
+        background-color: black;
+        color: white;
+      }*/
