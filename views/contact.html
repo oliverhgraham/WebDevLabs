@@ -4,6 +4,8 @@
 <title>Oliver Graham</title><!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="../static/script.js" ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -11,8 +13,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
-<body style = font-family:Arial>
+<body style = font-family:Arial  onload = "addYear()">
     <header class = "head">
         <h1>Oliver Graham</h1>
         <nav>
@@ -24,17 +33,23 @@
         
     </header>
 
-    <div class = "name">
+    <div class = "forms">
         <h2>Contact Me</h2>
-        <form>
+        <form id="contactForm" onsubmit="return validate()" novalidate>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <input type="text" id="name" required>
+    
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required><br><br>
-            <label for="comment">Comment:</label><br>
-            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
-            <input type="submit" value="Submit">
+            <input type="email" id="email" required>
+    
+            <label for="comment">Message:</label>
+            <textarea id="comment" required></textarea>
+    
+            <p id="validatemsg" class="error-message"></p>
+    
+            <button type="submit">Submit</button>
         </form>
+        <p id = "validatemsg"></p>
         <table>
             <tr>
                 <th>Email</th>
@@ -50,6 +65,6 @@
             </tr>
         </table>
     </div>
-    <footer>©designed and coded by Oliver Graham</footer>
+    <footer><p id="copyYear"></p> </footer>
 </body>
 </html>

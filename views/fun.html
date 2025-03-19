@@ -4,6 +4,8 @@
 <title>Oliver Graham</title><!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="../static/script.js" ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -12,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload = "addYear()">
     <header class = "head">
         <h1>Oliver Graham</h1>
         <nav>
@@ -25,7 +27,8 @@
     </header>
     <div class = "name">
         <h2>Things I love to do for fun</h2>
-        <ul>
+        <button id="showButton" onclick="showList()">Click to see...</button>
+        <ul id = "funList">
             <li>Running</li>
             <li>Building electric cars</li>
             <li>Racing electric cars</li>
@@ -33,6 +36,6 @@
             <li>Watching movies</li>
         </ul>
     </div>
-    <footer>©designed and coded by Oliver Graham</footer>
+    <footer><p id="copyYear"></p> </footer>
 </body>
 </html>

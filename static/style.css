@@ -35,8 +35,6 @@ form{
     margin:auto;
     text-align:center;
 }
-      /* Optionally, target all odd rows instead */
-      /*table tr:nth-child(odd) {
-        background-color: black;
-        color: white;
-      }*/
+#funlist {
+    display:none;
+}
