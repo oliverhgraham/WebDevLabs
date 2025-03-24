@@ -75,10 +75,10 @@ function addYear() {
 }
 addYear();
 
-function showList() {
-    document.getElementById("funList").style.display = "block";  
-    document.getElementById("showButton").style.display = "none"; 
-}
+//function showList() {
+  //  document.getElementById("funList").style.display = "block";  
+    //document.getElementById("showButton").style.display = "none"; 
+//}
 
 $(document).ready(function() {
     $("#fullBio").hide();
@@ -128,3 +128,19 @@ function validate() {
     }
     return true;
 }*/
+
+if (window.location.href.includes("fun.html")){
+    getAdvice();
+}
+
+function getAdvice(){
+    fetch("https://api.adviceslip.com/advice")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("adviceText").innerHTML = data.slip.advice;
+    })
+    .catch(error => {
+        console.error("error catching advice",error);
+        document.getElementById("adviceText").innerHTML = "Sorry, I can't think of any advice right now.";
+    });
+}

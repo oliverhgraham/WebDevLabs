@@ -35,6 +35,43 @@ form{
     margin:auto;
     text-align:center;
 }
-#funlist {
+/*#funlist {
     display:none;
+}*/
+.funImage{
+    border-radius: 100%;
+}
+.container{
+    display: inline-block;
+    border-radius: 10%;
+    box-shadow: 00px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.container button{
+    padding 10px 15px;
+    border = none;
+    background-color: rgba(0, 0, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    border-radious: 5px;
+    cursor: pointer;
+}
+
+.container button:hover{
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.mainLayout{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.item1,.item2,.item3,.item4{
+    width: 40vw;
+    margin: auto;
+
+}
+footer{
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.1);
+    color: white;
+    margin-top: 20px;
 }
