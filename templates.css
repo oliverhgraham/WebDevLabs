@@ -1,0 +1,112 @@
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color:white;
+    text-align: center;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #6697f9;
+    padding: 1rem;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "mainimg maincontent"
+        "bottomcontent bottomcontent";
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.mainimg {
+    grid-area: mainimg;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+}
+
+.maincontent {
+    grid-area: maincontent;
+    background-color: #e9ecef;
+    padding: 1rem;
+}
+
+.bottomcontent {
+    grid-area: bottomcontent;
+    background-color: #dee2e6;
+    padding: 1rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.nav a.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #0056b3;
+}
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.header {
+    animation: flicker 2s infinite;
+}
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "nav"
+            "maincontent"
+            "mainimg"
+            "bottomcontent"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    .maincontent {
+        grid-area: maincontent;
+        display: grid;
+        grid-template-areas:
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .mainimg {
+        grid-area: mainimg;
+        background-color: #f8f9fa;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .nav ul { 
+        display: none; /* Hide nav links by default */
+    }
+
+    .nav .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+}
